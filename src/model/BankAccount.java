@@ -7,6 +7,7 @@ public class BankAccount implements Comparable<BankAccount> {
     private String address;
     private long clientNumber;
     private double balance;
+    private int antiguity;
 
     public BankAccount(String name, long phoneNumber, String address, long clientNumber, double balance) {
         this.name = name;
@@ -51,13 +52,31 @@ public class BankAccount implements Comparable<BankAccount> {
         this.balance = balance;
     }
 
+    
+    public int getAntiguity() {
+        return antiguity;
+    }
+
+    public void setAntiguity(int antiguity) {
+        this.antiguity = antiguity;
+    }
+
     @Override
-    public int compareTo(BankAccount o) {
-        // TODO Auto-generated method stub
-        return 0;
+    public int compareTo(BankAccount au) {
+        if(au.clientNumber < this.clientNumber){
+            return 1;
+        }else if( au.clientNumber > this.clientNumber){
+            return -1;
+        }else{
+            return 0;
+        }
     }
 
 
-    
+    @Override
+    public String toString() {
+        String client =  "Cliente#"+ this.clientNumber + " Nombre: "+ this.name + " Balance:"+ this.balance  + " antiguedad: " + this.antiguity+ "\n";
+        return client;
+    }
     
 }

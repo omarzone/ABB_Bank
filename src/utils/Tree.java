@@ -28,7 +28,7 @@ public class Tree< T extends Comparable<T> >{
         return current;
     }
 
-    void deleteKey(T data) {
+    public void deleteKey(T data) {
         root = deleteRec(root, data); 
     }
 
@@ -109,15 +109,15 @@ public class Tree< T extends Comparable<T> >{
     public void traverse(int type) {
         switch(type) {
         case 1:
-            System.out.print("\nPreorder traversal: "); 
+            System.out.print("\nPreorder traversal: \n"); 
             preOrder(root);
             break;
         case 2:
-            System.out.print("\nInorder traversal: "); 
+            System.out.print("\nInorder traversal: \n"); 
             inOrder(root);
             break;
         case 3:
-            System.out.print("\nPostorder traversal: "); 
+            System.out.print("\nPostorder traversal: \n"); 
             postOrder(root);
             break;
         default:
@@ -128,7 +128,7 @@ public class Tree< T extends Comparable<T> >{
 
     private void preOrder(Node<T> auxRoot) {
         if (auxRoot != null){
-            System.out.print(auxRoot.getData() + "-");
+            System.out.print(auxRoot.getData() );
             preOrder(auxRoot.getLeftChild());
             preOrder(auxRoot.getRightChild());
         }   
@@ -137,7 +137,7 @@ public class Tree< T extends Comparable<T> >{
     private void inOrder(Node<T> auxRoot) {
         if (auxRoot != null){
             inOrder(auxRoot.getLeftChild());
-            System.out.print(auxRoot.getData() + "-");
+            System.out.print(auxRoot.getData() );
             inOrder(auxRoot.getRightChild());
         }
     }
@@ -146,7 +146,7 @@ public class Tree< T extends Comparable<T> >{
         if (auxRoot != null){
             postOrder(auxRoot.getLeftChild());            
             postOrder(auxRoot.getRightChild());
-            System.out.print(auxRoot.getData() + "-");
+            System.out.print(auxRoot.getData() );
         }
     }
 
