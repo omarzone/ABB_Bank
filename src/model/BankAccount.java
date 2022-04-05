@@ -82,9 +82,9 @@ public class BankAccount implements Comparable<BankAccount> {
 
     @Override
     public int compareTo(BankAccount au) {
-        if(au.accountNumber < this.accountNumber){
+        if(au.clientNumber < this.clientNumber){
             return 1;
-        }else if( au.accountNumber > this.accountNumber){
+        }else if( au.clientNumber> this.clientNumber){
             return -1;
         }else{
             return 0;

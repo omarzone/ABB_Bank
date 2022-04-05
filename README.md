@@ -8,4 +8,4 @@ Descripción: Utilice un Arbol Binario de Búsqueda (ABB) para almacenar datos d
 - [] Actualizar el saldo de alguna de las cuentas de un cliente. El usuario proporciona los datos de número de cliente, número de cuenta a actualizar y el nuevo saldo.
 - [x] Generar un reporte de todos los clientes, ordenados por su número de cliente.
 - [] Generar un reporte de todos los clientes que tengan una antigüedad mayor a los 5 años.
-- [] Dar de baja a un cliente registrado. el usuario proporciona el número de cliente.
+- [x] Dar de baja a un cliente registrado. el usuario proporciona el número de cliente.
