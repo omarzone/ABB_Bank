@@ -69,5 +69,32 @@ public class Gui {
 
     }
 
+    public void reportView() {
+        System.out.println("=======================================================");
+        System.out.println("               Bank Manager - Report");
+        System.out.println("=======================================================");
+    }
+
+    public int showModifyDataTypeView() {
+        int option = -1;
+        try {
+            Scanner input = new Scanner(System.in);
+            System.out.println("=======================================================");
+            System.out.println("               Bank Manager");
+            System.out.println("=======================================================");
+            System.out.println("   Select the data to modify:");
+            System.out.println("        1. Name");
+            System.out.println("        2. PhoneNumber");
+            System.out.println("        3. Address");
+            System.out.println("");
+            option = input.nextInt();
+            return option;
+
+        } catch (Exception ex) {
+            System.out.println("Select a valid option");
+            showModifyTypeView();
+        }
+        return option;
+    }
 
 }

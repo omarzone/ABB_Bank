@@ -1,4 +1,7 @@
 package utils;
+
+import model.BankAccount;
+
 public class Tree< T extends Comparable<T> >{
     Node <T> root;
 
@@ -109,15 +112,15 @@ public class Tree< T extends Comparable<T> >{
     public void traverse(int type) {
         switch(type) {
         case 1:
-            System.out.print("\nPreorder traversal: \n"); 
+            //System.out.print("\nPreorder traversal: \n"); 
             preOrder(root);
             break;
         case 2:
-            System.out.print("\nInorder traversal: \n"); 
+           // System.out.print("\nInorder traversal: \n"); 
             inOrder(root);
             break;
         case 3:
-            System.out.print("\nPostorder traversal: \n"); 
+            //System.out.print("\nPostorder traversal: \n"); 
             postOrder(root);
             break;
         default:
@@ -141,6 +144,8 @@ public class Tree< T extends Comparable<T> >{
             inOrder(auxRoot.getRightChild());
         }
     }
+    
+    
 
     private void postOrder(Node<T> auxRoot) {
         if (auxRoot != null){
@@ -149,5 +154,16 @@ public class Tree< T extends Comparable<T> >{
             System.out.print(auxRoot.getData() );
         }
     }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
+    }
+
+
+    
 
 }
